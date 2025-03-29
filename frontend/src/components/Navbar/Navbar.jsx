@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { FaBars, FaMapMarkerAlt, FaTimes } from "react-icons/fa";
-import { AiOutlinePhone } from "react-icons/ai";
+import { Menu, X, MapPin, Phone } from "lucide-react";
 import CompanyLogo from "../../assets/HEIRLOOMNEXUS.png";
 import ResponsiveNavbar from '../ResponsiveNavbar/ResponsiveNavbar';
 import { NavLink } from 'react-router-dom';
@@ -47,19 +46,17 @@ const Navbar = () => {
             {/* Logo Placeholder */}
             <div>
                 <a href="#" className="flex items-center space-x-2">
-                    {/* Display Logo */}
                     <img src={CompanyLogo} alt="Company Logo" className="w-20 h-20" />
                 </a>
             </div>
             <button className="text-2xl md:hidden" onClick={() => setShowNavBar(!showNavBar)}>
-                {showNavBar ? <FaTimes /> : <FaBars />}
+                {showNavBar ? <X /> : <Menu />}
             </button>
 
             {/* Contact & Address */}
             <div className='md:flex hidden space-x-7 items-center'>
-
                 <div className='flex items-center space-x-3'>
-                    <AiOutlinePhone className="text-primary text-5xl" />
+                    <Phone className="text-primary " size={48} />
                     <div>
                         <h3 className='font-semibold text-xl text-gray-900'>Contact Us</h3>
                         <a 
@@ -77,7 +74,7 @@ const Navbar = () => {
 
                 {/* Address */}
                 <div className='flex items-center space-x-3'>
-                    <FaMapMarkerAlt className="text-primary text-5xl " />
+                    <MapPin className="text-primary" size={48} />
                     <div>
                         <h3 className='font-semibold text-xl text-gray-900'>Our Address</h3>
                         <p className='text-gray-500 text-sm max-w-52 font-semibold '>12320 Barker Cypress Rd Ste 600 #177 Cypress, TX 77429</p>
@@ -90,23 +87,15 @@ const Navbar = () => {
 
         <div className='max-w-[80%] mx-auto hidden md:flex justify-between '>
             <ul className='flex space-x-8'>
-                {[
-                    { name: "Home", path: "/home" },
-                    { name: "Courses", path: "/courses" },
-                    { name: "About Us", path: "/about" },
-                    { name: "Contact Us", path: "/contact" },
-                    { name: "Testimonials", path: "/testimonials" }
-                ].map((item) => (
-                <li key={item.path}>
-                    <NavLink 
-                    to={item.path}
-                    className={({ isActive }) => 
-                        `nav-link ${isActive ? "active" : ""}`
-                    }
-                    >
-                    {item.name}
-                    </NavLink>
-                </li>
+                {["Home", "Courses", "About Us", "Contact Us", "Testimonials"].map((name, index) => (
+                    <li key={index}>
+                        <NavLink 
+                            to={`/${name.toLowerCase().replace(/ /g, "")}`}
+                            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+                        >
+                            {name}
+                        </NavLink>
+                    </li>
                 ))}
             </ul>
             <div className='flex space-x-5'>
@@ -120,25 +109,8 @@ const Navbar = () => {
 
         {/* Responsive Navbar for Mobile */}
         <ResponsiveNavbar isOpen={showNavBar} setIsOpen={setShowNavBar} />
-
-        {/* keeping this incase of its group link we will need to add there */}
-        {/* <div className='flex items-center space-x-3'>
-            <AiOutlinePhone className="text-teal-400 text-5xl" />
-            
-            <div>
-                <h3 className='font-semibold text-xl text-gray-900'>Join Our WhatsApp Group</h3>
-                <a 
-                    href="YOUR_GROUP_LINK_HERE" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-teal-500 text-lg font-medium"
-                >
-                    Click Here to Join
-                </a>
-            </div>
-        </div> */}
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;
