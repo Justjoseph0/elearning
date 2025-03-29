@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Discover & Enroll",
+      "description": "Find the perfect course tailored to your needs and enroll with ease.",
+      "icon": "FaSearch"
+    },
+    {
+      "title": "Learn & Engage",
+      "description": "Get hands-on experience with expert-led lessons and interactive content.",
+      "icon": "FaHandshake"
+    },
+    {
+      "title": "Achieve & Grow",
+      "description": "Earn certifications and unlock new career opportunities.",
+      "icon": "FaRocket"
+    }
+]
+  

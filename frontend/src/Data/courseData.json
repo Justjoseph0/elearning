@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "title": "Lesson 01: Course Introduction",
+      "content": "This lesson provides an overview of the course."
+    },
+    {
+      "id": 2,
+      "title": "Lesson 02: Getting Started",
+      "content": "Introduction to basic concepts and setup."
+    },
+    {
+      "id": 3,
+      "title": "Lesson 03: Core Concepts",
+      "content": "Deep dive into the essential topics of this course."
+    },
+    {
+      "id": 4,
+      "title": "Lesson 04: Advanced Techniques",
+      "content": "Exploring advanced concepts with examples."
+    },
+    {
+      "id": 5,
+      "title": "Lesson 05: Final Thoughts",
+      "content": "Summary and next steps after completing the course."
+    }
+  ]
+  

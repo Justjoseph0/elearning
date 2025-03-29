@@ -1,3 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-auth {
+      @apply px-4 py-1 font-normal text-lg
+             rounded-lg shadow-md transition-all duration-300 ease-in-out 
+             hover:shadow-xl active:scale-90 relative overflow-hidden;
+      
+      /* Button text color transition */
+      color: white;
+      background: linear-gradient(to right, #007BFF, #0056B3);
+  }
+
+  .clip-slant {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30% 100%);
+  }
+
+  .btn-auth::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+      transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+  }
+
+  .btn-auth:hover::before {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+  }
+
+  .btn-auth:hover {
+      background: linear-gradient(to right,#0056B3, #007BFF);
+      transform: translateY(-2px);
+  }
+
+  .btn-auth:active {
+      transform: scale(0.9);
+  }
+
+  .nav-link {
+    @apply font-semibold text-lg text-gray-800 cursor-pointer relative 
+           transition-all duration-300 ease-in-out;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 bottom-[-10px] w-0 h-[3px] bg-primary
+           transition-all duration-300 ease-in-out;
+  }
+  
+  .nav-link:hover {
+    @apply text-primary scale-105;
+  }
+  
+  .nav-link:hover::after,
+  .nav-link.active::after { 
+    @apply w-full; /* Expand underline on hover and when active */
+  }
+  
+  .nav-link.active {
+    @apply text-primary; /* Change text color when active */
+  }
+  
+
+  .italic-text{
+      @apply font-semibold italic
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100%); } /* Adjusted to loop smoothly */
+  }
+  
+  .animate-scroll {
+    display: flex;
+    gap: 40px;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    background: #1a1a1a; /* Ensure a visible background */
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    background: linear-gradient(45deg, red, yellow, blue, green);
+    top: -10%;
+    left: -10%;
+    z-index: 0; /* Keeps it behind the content */
+    animation: rotateBorder 4s linear infinite;
+}
+
+/* Add an inner box to keep text readable */
+.card-content {
+    position: relative;
+    z-index: 1; /* Ensures text stays above the gradient */
+}
+
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+  
+}

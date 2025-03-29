@@ -1,0 +1,23 @@
+[
+    {
+      "question": "What is DevOps?",
+      "answer": "DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) to shorten the development lifecycle and improve software quality."
+    },
+    {
+      "question": "Why is DevOps important?",
+      "answer": "DevOps helps teams to collaborate better, automate processes, and deliver software faster with higher reliability and stability."
+    },
+    {
+      "question": "What are some key DevOps tools?",
+      "answer": "Popular DevOps tools include Docker, Kubernetes, Jenkins, Ansible, Terraform, Git, and Prometheus."
+    },
+    {
+      "question": "What is CI/CD in DevOps?",
+      "answer": "CI/CD (Continuous Integration/Continuous Deployment) is a DevOps practice where code changes are automatically tested and deployed to production environments."
+    },
+    {
+      "question": "What is Infrastructure as Code (IaC)?",
+      "answer": "IaC allows developers to define and manage infrastructure using code instead of manual processes, enabling automation and consistency."
+    }
+  ]
+  
