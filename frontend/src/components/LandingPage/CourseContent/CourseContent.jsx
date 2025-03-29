@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import courseData from "../../Data/courseData.json";
+import { ChevronRight, ChevronDown } from "lucide-react";
+import courseData from "../../../Data/courseData.json";
 import { motion, useInView } from "framer-motion";
 
 const CourseContent = () => {
@@ -42,9 +42,9 @@ const CourseContent = () => {
             <div className="flex justify-between items-center">
               <span className="font-medium">{lesson.title}</span>
               {openLesson === lesson.id ? (
-                <FaChevronUp className="text-gray-500" />
+                <ChevronDown className="text-gray-500 w-5 h-5" />
               ) : (
-                <FaChevronDown className="text-gray-500" />
+                <ChevronRight className="text-gray-500 w-5 h-5" />
               )}
             </div>
             <motion.div

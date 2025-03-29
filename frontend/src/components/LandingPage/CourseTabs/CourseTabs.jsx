@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FaRegCommentDots } from "react-icons/fa";
-import { AiOutlineCheckCircle } from "react-icons/ai";
+import { MessageCircle, CheckCircle } from "lucide-react";
 
 const CourseTabs = () => {
   const [activeTab, setActiveTab] = useState("info");
@@ -74,7 +73,7 @@ const CourseTabs = () => {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="flex flex-col items-center justify-center p-5"
             >
-              <FaRegCommentDots className="text-4xl text-gray-400 mb-2" />
+              <MessageCircle className="w-10 h-10 text-gray-400 mb-2" />
               <p className="text-gray-500 text-lg">No reviews yet</p>
             </motion.div>
           )}
@@ -98,7 +97,8 @@ const CourseTabs = () => {
           whileHover={{ scale: 1.05 }}
         >
           <div className="flex items-center gap-3">
-            <span className="text-primary text-xl"><AiOutlineCheckCircle /></span>
+            
+            <span className="text-primary w-5 h-5"><CheckCircle /></span>
             <h3 className="text-lg font-semibold">Why This Course?</h3>
           </div>
           <p className="text-sm text-gray-600 mt-2">
@@ -116,7 +116,8 @@ const CourseTabs = () => {
           whileHover={{ scale: 1.05 }}
         >
           <div className="flex items-center gap-3">
-            <span className="text-primary text-xl"><AiOutlineCheckCircle /></span>
+            
+            <span className="text-primary w-5 h-5"><CheckCircle /></span>
             <h3 className="text-lg font-semibold">Course Benefits</h3>
           </div>
           <p className="text-sm text-gray-600 mt-2">
@@ -134,7 +135,8 @@ const CourseTabs = () => {
           whileHover={{ scale: 1.05 }}
         >
           <div className="flex items-center gap-3">
-            <span className="text-primary text-xl"><AiOutlineCheckCircle /></span>
+            
+            <span className="text-primary w-5 h-5"><CheckCircle /></span>
             <h3 className="text-lg font-semibold">Career Impact</h3>
           </div>
           <p className="text-sm text-gray-600 mt-2">

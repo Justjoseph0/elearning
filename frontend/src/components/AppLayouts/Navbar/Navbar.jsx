@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, MapPin, Phone } from "lucide-react";
-import CompanyLogo from "../../assets/HEIRLOOMNEXUS.png";
+import CompanyLogo from "../../../assets/HEIRLOOMNEXUS.png";
 import ResponsiveNavbar from '../ResponsiveNavbar/ResponsiveNavbar';
 import { NavLink } from 'react-router-dom';
 

@@ -1,9 +1,9 @@
 import React from "react";
-import HeroImage from "../../assets/landingHeroImage1.png"
-import TopImage from "../../assets/ToplandingHeroImage2.png"
-import AwsLogo from "../../assets/aws-image.png"
-import CloudGuruLogo from "../../assets/CloudGuru-logo.png"
-import { FaUsers, FaStar } from "react-icons/fa";
+import HeroImage from "../../../assets/landingHeroImage1.png"
+import TopImage from "../../../assets/ToplandingHeroImage2.png"
+import AwsLogo from "../../../assets/aws-image.png"
+import CloudGuruLogo from "../../../assets/CloudGuru-logo.png"
+import { Users, Star } from "lucide-react";
 import { motion } from "framer-motion";
 
 const textVariants = {
@@ -108,7 +108,7 @@ const LandingHero = () => {
             </div>
           </div>
         </article>
-        
+
         <aside className="relative md:w-[40%] mt-10 md:mt-0 ">
           {/* Circle with Image Inside */}
           <motion.div
@@ -154,12 +154,12 @@ const LandingHero = () => {
               transition={{ duration: 1.2, ease: "easeOut", delay: 1 }}
             >
             <div className="bg-white shadow-lg rounded-md p-3 font-bold flex items-center justify-center gap-2">
-              <FaUsers className="text-blue-500 text-xl" />
+              <Users className="text-blue-500 w-5 h-5" />
               <span>100+ Learners</span>
             </div>
 
             <div className="bg-white shadow-lg rounded-md p-3 font-bold flex items-center justify-center gap-2">
-              <FaStar className="text-yellow-500 text-xl" />
+              <Star className="text-yellow-500 w-5 h-5" />
               <span>3.5</span>
               <span className="text-sm font-medium">4 ratings</span>
             </div>
@@ -171,4 +171,4 @@ const LandingHero = () => {
   );
 };
 
-export default LandingHero;
+export default LandingHero;        

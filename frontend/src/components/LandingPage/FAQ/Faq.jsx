@@ -1,5 +1,5 @@
 import { useState } from "react";
-import faqData from "../../Data/FaqData.json";
+import faqData from "../../../Data/FaqData.json";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(0); // First one open by default

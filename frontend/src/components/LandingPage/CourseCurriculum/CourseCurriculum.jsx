@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AiOutlinePhone } from 'react-icons/ai';
-import TopImage from "../../assets/ToplandingHeroImage2.png";
+import { Phone } from "lucide-react";
+import TopImage from "../../../assets/ToplandingHeroImage2.png";
 
 const CourseCurriculum = () => {
   return (
@@ -73,7 +73,7 @@ const CourseCurriculum = () => {
               <h2 className='text-xl font-semibold'>+65 31 585082</h2>
             </div>
             <div className='border-l border-gray-600 h-10'></div>
-            <AiOutlinePhone className="text-primary text-5xl" />
+            <Phone className="text-primary w-16 h-16" />
           </motion.div>
 
           <motion.div 

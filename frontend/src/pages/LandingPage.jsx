@@ -1,9 +1,9 @@
-import CourseContent from '@/components/CourseContent/CourseContent'
-import CourseCurriculum from '@/components/CourseCurriculum/CourseCurriculum'
-import CourseTabs from '@/components/CourseTabs/CourseTabs'
-import FAQ from '@/components/FAQ/Faq'
-import HowWeWork from '@/components/HowWeWork/HowWeWork'
-import LandingHero from '@/components/LandingHero/LandingHero'
+import CourseContent from '@/components/LandingPage/CourseContent/CourseContent'
+import CourseCurriculum from '@/components/LandingPage/CourseCurriculum/CourseCurriculum'
+import CourseTabs from '@/components/LandingPage/CourseTabs/CourseTabs'
+import FAQ from '@/components/LandingPage/FAQ/Faq'
+import HowWeWork from '@/components/LandingPage/HowWeWork/HowWeWork'
+import LandingHero from '@/components/LandingPage/LandingHero/LandingHero'
 import React from 'react'
 
 const LandingPage = () => {

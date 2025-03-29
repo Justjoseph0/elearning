@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { FaSearch, FaHandshake, FaRocket } from "react-icons/fa";
-import howWeWorkData from "../../Data/HowWeWorkData.json";
+import { Search, Handshake, Rocket } from "lucide-react";
+import howWeWorkData from "../../../Data/HowWeWorkData.json";
 import { useEffect, useState } from "react";
 
 const HowWeWork = () => {
   const iconMap = {
-    FaSearch: <FaSearch className="text-primary text-3xl" />,
-    FaHandshake: <FaHandshake className="text-primary text-3xl" />,
-    FaRocket: <FaRocket className="text-primary text-3xl" />,
+    FaSearch: <Search className="text-primary w-8 h-8" />, 
+    FaHandshake: <Handshake className="text-primary w-8 h-8" />, 
+    FaRocket: <Rocket className="text-primary w-8 h-8" />, 
   };
 
   const [steps, setSteps] = useState([]);
@@ -32,7 +32,7 @@ const HowWeWork = () => {
             {iconMap[step.icon]}
             <h3 className="text-xl font-semibold">{step.title}</h3>
             <p className="text-gray-600">{step.description}</p>
-        </div>
+          </div>
         ))}
       </div>
     </section>

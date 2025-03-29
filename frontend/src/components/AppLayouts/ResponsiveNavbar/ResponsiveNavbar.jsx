@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTimes } from "react-icons/fa";
+import { X } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ResponsiveNavbar = ({ isOpen, setIsOpen }) => {
@@ -15,7 +15,7 @@ const ResponsiveNavbar = ({ isOpen, setIsOpen }) => {
         >
             {/* Close Button */}
             <button className="absolute top-5 right-5 text-2xl" onClick={() => setIsOpen(false)}>
-                <FaTimes />
+                <X className="w-8 h-8" />
             </button>
 
             {/* Nav Links */}
