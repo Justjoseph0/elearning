@@ -24,6 +24,7 @@ export default {
   			},
   			darkPurple: ' #720034',
   			customDark: '#222121',
+			dark: '#000000',
   			light: '#FFFFFF',
   			hoverLight: '#66B2FF',
   			hoverDark: '#0056B3',

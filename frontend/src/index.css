@@ -67,4 +67,39 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    background: #1a1a1a; /* Ensure a visible background */
 }
+
+.card::after {
+    content: "";
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    background: linear-gradient(45deg, #720034, red, yellow, green);
+    top: -10%;
+    left: -10%;
+    z-index: 0; /* Keeps it behind the content */
+    animation: rotateBorder 4s linear infinite;
+}
+
+/* Add an inner box to keep text readable */
+.card-content {
+    position: relative;
+    z-index: 1; /* Ensures text stays above the gradient */
+}
+
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+}
+
+

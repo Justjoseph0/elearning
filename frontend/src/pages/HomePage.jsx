@@ -1,12 +1,15 @@
-
+import HeroSlider from '@/components/HomePage/HeroSlider'
+import OurServices from '@/components/HomePage/OurServices'
+import React from 'react'
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-red-500 text-white flex justify-center ">
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    </div>
+    <main className='font-poppins'>
+        <HeroSlider />
+        <section className='bg-customDark py-8'>
+          <OurServices />
+        </section>
+    </main>
   )
 }
 
