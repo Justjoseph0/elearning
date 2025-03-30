@@ -38,7 +38,7 @@ const NavBar = () => {
     <nav className={`font-montserrat sticky top-0 w-full z-50 transition-all duration-300 border-b ${scrolled ? 'shadow-lg' : ''}`}>
       {/* Top banner with features */}
       <div className="bg-customDark text-white py-2 hidden md:block">
-        <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           {features.map((feature, index) => (
             <div key={index} className="flex items-center space-x-2">
               {feature.icon}
@@ -46,7 +46,7 @@ const NavBar = () => {
                 <h3 className="font-medium text-sm">{feature.title}</h3>
                 <p className="text-white text-xs">{feature.desc}</p>
               </div>
-              {index < features.length - 1 && <div className="border-l border-gray-600 h-10 mx-4"></div>}
+              {index < features.length - 1 && <div className="h-10 mx-4"></div>}
             </div>
           ))}
         </div>
@@ -127,7 +127,7 @@ const NavBar = () => {
                   onClick={() => setShowMobileMenu(false)}
                   className={({ isActive }) => 
                     `text-sm font-medium py-2 border-b border-customDark ${
-                      isActive ? "text-primary" : "text-gray-700"
+                      isActive ? "text-darkPurple" : "text-customDark"
                     }`
                   }
                 >
@@ -137,12 +137,12 @@ const NavBar = () => {
               
               <div className="pt-4 flex flex-col space-y-3">
                 <div className="flex items-center space-x-2">
-                  <Phone className="text-primary" size={18} />
+                  <Phone className="text-darkPurple" size={18} />
                   <a href="https://wa.me/2349128721745" className="text-sm">+234 912 872 1745</a>
                 </div>
                 
                 <div className="flex items-center space-x-2">
-                  <MapPin className="text-primary" size={18} />
+                  <MapPin className="text-darkPurple" size={18} />
                   <p className="text-sm">Cypress, TX 77429</p>
                 </div>
               </div>
