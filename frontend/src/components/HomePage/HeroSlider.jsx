@@ -15,7 +15,7 @@ const HeroSlider = () => {
     visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.3 } }),
   };
   return (
-    <div className="relative h-[70vh] w-[90%] ml-auto flex space-y-20 items-center justify-center">
+    <div className="relative h-[70vh] max-w-7xl ml-auto flex space-y-20 px-4 lg:px-0  items-center justify-center">
       <Swiper
         direction={"vertical"}
         pagination={{ clickable: true }}
