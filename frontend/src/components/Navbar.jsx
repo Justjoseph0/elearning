@@ -38,7 +38,7 @@ const NavBar = () => {
     <nav className={`font-montserrat sticky top-0 w-full z-50 transition-all duration-300 border-b ${scrolled ? 'shadow-lg' : ''}`}>
       {/* Top banner with features */}
       <div className="bg-customDark text-white py-2 hidden md:block">
-        <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 flex justify-around items-center">
           {features.map((feature, index) => (
             <div key={index} className="flex items-center space-x-2">
               {feature.icon}

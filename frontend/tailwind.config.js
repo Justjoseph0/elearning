@@ -22,11 +22,13 @@ export default {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
-  			darkPurple: ' #720034',
-  			customDark: '#222121',
-  			light: '#FFFFFF',
-  			hoverLight: '#66B2FF',
-  			hoverDark: '#0056B3',
+  			// 
+			  primary: '#007BFF', // Electric Blue
+			  dark: '#000000', // Black
+			  lightDark: "#1E1E1E",
+			  light: '#FFFFFF', // White
+			  hoverLight: '#66B2FF',
+			  hoverDark: '#0056B3',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
