@@ -1,115 +1,157 @@
-import { useState } from "react";
-import { Menu, X, MapPin, Phone } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, MapPin, Phone, Clock, Lock, GraduationCap } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
-
 const NavBar = () => {
-  const [showNavBar, setShowNavBar] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  
+  // Handle navbar background change on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "Courses", path: "/courses" },
+    { name: "About Us", path: "/about-us" },
+    { name: "Contact Us", path: "/contactus" },
+    { name: "Testimonials", path: "/faq" }
+  ];
+
+  const features = [
+    { icon: <Clock className="text-yellow-400" size={20} />, title: "Learn at Your Pace", desc: "Access lifetime course materials anytime." },
+    { icon: <Lock className="text-green-400" size={20} />, title: "Secure Payment", desc: "Safe & easy checkout for all courses." },
+    { icon: <GraduationCap className="text-blue-400" size={20} />, title: "Expert-Led Courses", desc: "Learn from top industry professionals." }
+  ];
+
   return (
-    <nav className='font-montserrat shadow-md mb-10 md:mb-0 '>
-        <div className='bg-black md:block hidden text-white py-4'>
-            <div className='flex flex-col md:flex-row justify-between items-center max-w-[80%] mx-auto text-center'>
-                {/* Learn at Your Pace */}
-                <div className='flex items-center space-x-3 mb-4 md:mb-0'>
-                    <span className='text-yellow-400 text-2xl'>🕒</span>
-                    <div>
-                        <h3 className='font-semibold text-lg '>Learn at Your Pace</h3>
-                        <p className='text-gray-400 text-sm'>"Access lifetime course materials anytime."</p>
-                    </div>
-                </div>
-
-                <div className='hidden md:block border-l border-gray-600 h-10'></div>
-
-                {/* Secure Payment */}
-                <div className='flex items-center space-x-3 mb-4 md:mb-0'>
-                    <span className='text-hoverLight text-2xl'>🔒</span>
-                    <div>
-                        <h3 className='font-semibold text-lg'>Secure Payment</h3>
-                        <p className='text-gray-400 text-sm'>"Safe & easy checkout for all courses."</p>
-                    </div>
-                </div>
-
-                <div className='hidden md:block border-l border-gray-600 h-10'></div>
-
-                {/* Expert-Led Courses */}
-                <div className='flex items-center space-x-3'>
-                    <span className='text-hoverLight text-2xl'>🎓</span>
-                    <div>
-                        <h3 className='font-semibold text-lg'>Expert-Led Courses</h3>
-                        <p className='text-gray-400 text-sm'>"Learn from top industry professionals."</p>
-                    </div>
-                </div>
+    <nav className={`font-montserrat sticky top-0 w-full z-50 transition-all duration-300 border-b ${scrolled ? 'shadow-lg' : ''}`}>
+      {/* Top banner with features */}
+      <div className="bg-customDark text-white py-2 hidden md:block">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-center space-x-2">
+              {feature.icon}
+              <div>
+                <h3 className="font-medium text-sm">{feature.title}</h3>
+                <p className="text-white text-xs">{feature.desc}</p>
+              </div>
+              {index < features.length - 1 && <div className="border-l border-gray-600 h-10 mx-4"></div>}
             </div>
+          ))}
         </div>
-        <div className='flex flex-row max-w-[80%] mx-auto justify-between items-center py-4'>
-            {/* Logo Placeholder */}
-            <div>
-                <a href="#" className="flex items-center space-x-2">
-                    <img src="images/courseLogo.png" alt="Company Logo" className="w-20 h-20" />
-                </a>
+      </div>
+      
+      {/* Main navbar */}
+      <div className={`bg-white py-3 transition-all duration-300 ${scrolled ? 'py-2' : ''}`}>
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center">
+            {/* Logo */}
+            <div className="flex items-center">
+              <img src="images/courseLogo.png" alt="Company Logo" className="w-12 h-12 md:w-16 md:h-16" />
             </div>
-            <button className="text-2xl md:hidden" onClick={() => setShowNavBar(!showNavBar)}>
-                {showNavBar ? <X /> : <Menu />}
+            
+            {/* Desktop Navigation Links */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navLinks.map((link, index) => (
+                <NavLink 
+                  key={index}
+                  to={link.path}
+                  className={({ isActive }) => 
+                    `text-sm font-medium hover:text-darkPurple  transition-colors ${
+                      isActive ? "text-darkPurple border-b-2 border-darkPurple" : "text-customDark"
+                    }`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              ))}
+            </div>
+            
+            {/* Contact & Address - Desktop */}
+            <div className="hidden lg:flex items-center space-x-6">
+              <div className="flex items-center space-x-2">
+                <Phone className="text-primary" size={20} />
+                <div>
+                  <p className="text-xs text-customDark">Contact Us</p>
+                  <a 
+                    href="https://wa.me/2349128721745" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium hover:text-primary"
+                  >
+                    +234 912 872 1745
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-2">
+                <MapPin className="text-primary" size={20} />
+                <div>
+                  <p className="text-xs text-customDark">Our Address</p>
+                  <p className="text-xs">Cypress, TX 77429</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Mobile menu button */}
+            <button 
+              className="md:hidden text-customDark focus:outline-none" 
+              onClick={() => setShowMobileMenu(!showMobileMenu)}
+            >
+              {showMobileMenu ? <X size={24} /> : <Menu size={24} />}
             </button>
-
-            {/* Contact & Address */}
-            <div className='md:flex hidden space-x-7 items-center'>
-                <div className='flex items-center space-x-3'>
-                    <Phone className="text-primary " size={48} />
-                    <div>
-                        <h3 className='font-semibold text-xl text-gray-900'>Contact Us</h3>
-                        <a 
-                            href="https://wa.me/2349128721745" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-gray-500 hover:text-hoverLight text-sm font-semibold"
-                        >
-                            +234 912 872 1745
-                        </a>
-                    </div>
-                </div>
-
-                <div className='hidden md:block border-l border-gray-600 h-10'></div>
-
-                {/* Address */}
-                <div className='flex items-center space-x-3'>
-                    <MapPin className="text-primary" size={48} />
-                    <div>
-                        <h3 className='font-semibold text-xl text-gray-900'>Our Address</h3>
-                        <p className='text-gray-500 text-sm max-w-52 font-semibold '>12320 Barker Cypress Rd Ste 600 #177 Cypress, TX 77429</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-
-        <div className='hidden mb-5 md:block border-b-2 border-gray-600'></div>
-
-        <div className='max-w-[80%] mx-auto hidden md:flex justify-between '>
-            <ul className='flex space-x-8'>
-                {["Home", "Courses", "About Us", "Contact Us", "Testimonials"].map((name, index) => (
-                    <li key={index}>
-                        <NavLink 
-                            to={`/${name.toLowerCase().replace(/ /g, "")}`}
-                            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
-                        >
-                            {name}
-                        </NavLink>
-                    </li>
-                ))}
-            </ul>
-            <div className='flex space-x-5'>
-                <button className='btn-auth'>Login</button>
-                <button className='btn-auth'>Register</button>
-                <button className='btn-auth'>Logout</button>
+      </div>
+      
+      {/* Mobile menu */}
+      {showMobileMenu && (
+        <div className="md:hidden bg-white shadow-lg">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex flex-col space-y-4">
+              {navLinks.map((link, index) => (
+                <NavLink 
+                  key={index}
+                  to={link.path}
+                  onClick={() => setShowMobileMenu(false)}
+                  className={({ isActive }) => 
+                    `text-sm font-medium py-2 border-b border-customDark ${
+                      isActive ? "text-primary" : "text-gray-700"
+                    }`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              ))}
+              
+              <div className="pt-4 flex flex-col space-y-3">
+                <div className="flex items-center space-x-2">
+                  <Phone className="text-primary" size={18} />
+                  <a href="https://wa.me/2349128721745" className="text-sm">+234 912 872 1745</a>
+                </div>
+                
+                <div className="flex items-center space-x-2">
+                  <MapPin className="text-primary" size={18} />
+                  <p className="text-sm">Cypress, TX 77429</p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-
-        <div className='hidden mt-5 md:block border-b-2 border-gray-600'></div>
-
-        {/* Responsive Navbar for Mobile */}
-        {/* <ResponsiveNavbar isOpen={showNavBar} setIsOpen={setShowNavBar} /> */}
+      )}
     </nav>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

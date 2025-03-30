@@ -1,7 +1,10 @@
 import React from "react";
 import { Phone, Mail, Home, Facebook, Twitter, Instagram, Linkedin, Youtube, ArrowRight } from "lucide-react";
+import { Input } from "./ui/input";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="py-5 bg-black font-montserrat mt-20">
       <div className="max-w-[80%] mx-auto flex flex-col gap-4">
@@ -131,7 +134,7 @@ const Footer = () => {
             </p>
 
             <div className="flex w-full max-w-md space-x-2">
-              <input
+              <Input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 p-5 rounded-md border-white border-2 focus:ring-2 focus:ring-hoverDark"
@@ -165,7 +168,8 @@ const Footer = () => {
           </div>
 
           <div className="text-center md:text-left text-sm">
-            &copy; 2024 HeirloomNexus Inc. All rights reserved.
+          &copy; {currentYear} HeirloomNexus Inc. All rights reserved.
+
           </div>
         </div>
       </div>
