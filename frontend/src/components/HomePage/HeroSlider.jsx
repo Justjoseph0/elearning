@@ -78,14 +78,14 @@ const HeroSlider = () => {
                 <motion.button 
                   whileHover={{ scale: 0.9 }}
                   whileTap={{ scale: 0.5 }}
-                  className="bg-primary text-sm font-semibold rounded text-white p-4 transition duration-300 ease-in-out hover:bg-hoverDark hover:shadow-lg"
+                  className="bg-darkPurple text-sm font-semibold rounded text-white p-4 transition duration-300 ease-in-out hover:bg-hoverDark hover:shadow-lg"
                 >
                   Our Training Options
                 </motion.button>
                 <motion.button 
                   whileHover={{ scale: 0.9 }}
                   whileTap={{ scale: 0.5 }}
-                  className="border-primary border-2 text-primary text-sm font-semibold rounded px-4 py-3 transition duration-300 ease-in-out hover:bg-hoverDark hover:border-none hover:py-4 hover:text-white hover:shadow-lg"
+                  className="border-darkPurple border-2 text-darkPurple text-sm font-semibold rounded px-4 py-3 transition duration-300 ease-in-out hover:bg-hoverDark hover:border-none hover:py-4 hover:text-white hover:shadow-lg"
                 >
                   Get Free Consultation
                 </motion.button>
@@ -135,7 +135,7 @@ const HeroSlider = () => {
 
               {/* 📌 Call-to-Action Button */}
               <div className="mt-6">
-                <button className="bg-primary text-sm font-semibold rounded text-white p-4 transition duration-300 ease-in-out hover:bg-hoverDark hover:shadow-lg">
+                <button className="bg-darkPurple text-sm font-semibold rounded text-white p-4 transition duration-300 ease-in-out hover:bg-hoverDark hover:shadow-lg">
                   Explore Learning Paths
                 </button>
               </div>
@@ -169,7 +169,7 @@ const HeroSlider = () => {
 
               {/* 📌 Call-to-Action Button */}
               <div className="mt-6">
-                <button className="bg-primary text-sm font-semibold rounded text-white p-4 transition duration-300 ease-in-out hover:bg-hoverDark hover:shadow-lg">
+                <button className="bg-darkPurple text-sm font-semibold rounded text-white p-4 transition duration-300 ease-in-out hover:bg-hoverDark hover:shadow-lg">
                   Learn More About Us
                 </button>
               </div>

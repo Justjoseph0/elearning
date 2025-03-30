@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <main className='font-poppins'>
         <HeroSlider />
-        <section className='bg-lightDark py-8'>
+        <section className='bg-customDark py-8'>
           <OurServices />
         </section>
     </main>

@@ -79,7 +79,7 @@
     position: absolute;
     height: 120%;
     width: 120%;
-    background: linear-gradient(45deg, red, yellow, blue, green);
+    background: linear-gradient(45deg, #720034, red, yellow, green);
     top: -10%;
     left: -10%;
     z-index: 0; /* Keeps it behind the content */
