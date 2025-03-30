@@ -2,9 +2,9 @@ import React from 'react'
 
 const OurServices = () => {
   return (
-    <section className='mx-auto md:w-[80%] py-10'>
+    <section className='mx-auto w-[80%] py-10'>
         <h2 className='text-3xl text-center font-bold text-light mb-6'>Our Services</h2>
-        <article className="grid grid-cols-3 gap-4 w-full h-full">
+        <article className="grid grid-cols-1 gap-4 w-full h-full">
             {/* Left Side - 2 Smaller Grid Items */}
             <div className="flex flex-col space-y-4">
                 <div className='bg-customDark border-4 border-black p-1 rounded-xl h-full shadow-2xl card  '>
@@ -28,7 +28,7 @@ const OurServices = () => {
             {/* Center - 1 Large Grid Item */}
 
             <div className="flex items-center justify-center h-full bg-lightDark border-4 border-black p-1 rounded-xl shadow-2xl card ">
-                <div className="bg-dark text-white p-8 rounded-lg shadow-md w-full h-[60vh] card-content">
+                <div className="bg-dark text-white p-8 rounded-lg shadow-md w-full h-auto card-content">
                     <h2 className="text-2xl text-darkPurple font-bold mb-4">Hands-on Cloud Labs</h2>
                     <p className="text-gray-300">
                         Get real-world experience with cloud computing through interactive labs. Deploy virtual machines, configure networks, 
