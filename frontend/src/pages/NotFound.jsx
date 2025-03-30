@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
 
 
@@ -13,7 +14,7 @@ const NotFound = () => {
       </p>
 
       <Link
-        href="/"
+        to={'/'}
         className="mt-5 font-normal flex items-center text-indigo-800"
       >
         <span className="pr-2">Go back Home</span>
