@@ -15,7 +15,7 @@ const HeroSlider = () => {
     visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.3 } }),
   };
   return (
-    <div className="relative h-[70vh] max-w-7xl ml-auto flex space-y-20 px-4 lg:px-0  items-center justify-center">
+    <div className="relative h-[70vh] w-full lg:w-[90%] ml-auto flex items-center justify-center ">
       <Swiper
         direction={"vertical"}
         pagination={{ clickable: true }}
@@ -29,17 +29,17 @@ const HeroSlider = () => {
             initial={{ opacity: 0, y: 50 }} 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="relative flex flex-col-reverse md:flex-row justify-between h-full"
+            className="relative flex flex-col-reverse lg:flex-row lg:justify-between h-full text-center lg:text-left"
           >
             {/* Left Side - Text */}
             <motion.div 
               initial={{ opacity: 0, x: -50 }} 
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="w-full relative z-10 mt-16 bg-white md:bg-transparent p-6 md:p-0"
+              className="w-full lg:w-1/2 relative z-10 bg-white lg:bg-transparent p-6"
             >
               <motion.h1
-                className="text-2xl md:text-4xl font-bold leading-tight"
+                className="text-2xl lg:text-4xl font-bold leading-tight"
                 variants={textVariants}
                 initial="hidden"
                 animate="visible"
@@ -52,12 +52,12 @@ const HeroSlider = () => {
                 initial="hidden"
                 animate="visible"
                 custom={4}
-                className="text-lg md:text-xl mt-4 text-gray-700">
+                className="text-lg lg:text-xl mt-4 text-gray-700">
                 Future-Proof Your Career 🚀 Learn High-Income Skills Today!
               </motion.h3>
 
               <motion.div
-                className="flex flex-col gap-3 mt-4 text-lg font-semibold text-gray-900"
+                className="flex flex-col gap-3 mt-4 text-sm font-semibold items-center lg:items-start text-gray-900"
                 variants={textVariants}
                 initial="hidden"
                 animate="visible"
@@ -74,7 +74,7 @@ const HeroSlider = () => {
                 initial="hidden"
                 animate="visible"
                 custom={8}
-                className="mt-6 flex gap-4">
+                className="mt-6 flex flex-col lg:flex-row gap-4 justify-center lg:justify-start">
                 <motion.button 
                   whileHover={{ scale: 0.9 }}
                   whileTap={{ scale: 0.5 }}
@@ -85,7 +85,7 @@ const HeroSlider = () => {
                 <motion.button 
                   whileHover={{ scale: 0.9 }}
                   whileTap={{ scale: 0.5 }}
-                  className="border-darkPurple border-2 text-darkPurple text-sm font-semibold rounded px-4 py-3 transition duration-300 ease-in-out hover:bg-hoverDark hover:border-none hover:py-4 hover:text-white hover:shadow-lg"
+                  className="border-[#720034] border-2 text-[#720034] text-sm font-semibold rounded px-4 py-3 transition duration-300 ease-in-out hover:bg-[#720034] hover:text-white"
                 >
                   Get Free Consultation
                 </motion.button>
@@ -97,7 +97,7 @@ const HeroSlider = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.7 }}
-              className="md:w-[60%] absolute right-0 w-1/2"
+              className="w-full lg:w-1/2 relative overflow-hidden" // Added 'overflow-hidden'
             >
               <motion.img
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -105,28 +105,29 @@ const HeroSlider = () => {
                 transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
                 src={imageSlider}
                 alt="Best Online Courses"
-                className="w-full h-[550px] object-cover"
+                className="w-full h-full object-cover max-h-[500px]" // Added 'max-h-[550px]'
               />
-              <div className="absolute hidden md:block inset-y-0 left-0 w-[30%] bg-gradient-to-r from-white to-transparent"></div>
+              <div className="absolute lg:block inset-y-0 left-0 w-[30%] bg-gradient-to-r from-white to-transparent"></div>
             </motion.div>
           </motion.header>
         </SwiperSlide>
         
         {/* Slide 2 */}
         <SwiperSlide>
-          <header className="relative flex flex-col-reverse md:flex-row justify-between h-full">
+          <header className="relative flex flex-col-reverse lg:flex-row h-full text-center lg:text-left">
+
             {/* Left Side - Text */}
-            <div className="w-full relative z-10 mt-16 bg-white md:bg-transparent p-6 md:p-0">
+            <div className="w-full lg:w-1/2 relative z-10 bg-white lg:bg-transparent p-6">
               {/* SEO-Optimized Heading */}
-              <h1 className="text-2xl md:text-4xl font-bold leading-tight max-w-2xl">
+              <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
                 Master In-Demand Skills & Advance Your Career
               </h1>
-              <h3 className="text-lg md:text-xl max-w-2xl mt-4 text-gray-700">
+              <h3 className="text-lg lg:text-xl mt-4 text-gray-700">
                 Gain hands-on experience with expert-led courses designed for real-world success.
               </h3>
 
               {/* 🔥 Key Highlights in a Column */}
-              <div className="flex flex-col gap-3 mt-4 text-lg font-semibold text-gray-900">
+              <div className="flex flex-col gap-3 mt-4 text-sm font-semibold items-center lg:items-start text-gray-900">
                 <span className="flex items-center gap-2">📚 Access Exclusive Learning Resources</span>
                 <span className="flex items-center gap-2">💡 Practical Projects & Case Studies</span>
                 <span className="flex items-center gap-2">🌍 Join a Community of Professionals</span>
@@ -142,28 +143,28 @@ const HeroSlider = () => {
             </div>
 
             {/* Right Side - Image with white overlay gradient */}
-            <div className="md:w-[60%] absolute right-0 w-1/2">
+            <div className="w-full lg:w-1/2 relative overflow-hidden">
               <img
                 src={imageSlider2}
                 alt="Best Online Courses"
-                className="w-full h-[550px] object-cover"
+                className="w-full h-full object-cover max-h-[500px]"
               />
               {/* White gradient flowing from text side into image */}
-              <div className="absolute hidden md:block inset-y-0 left-0 w-[30%] bg-gradient-to-r from-white to-transparent"></div>
+              <div className="absolute hidden lg:block inset-y-0 left-0 w-[30%] bg-gradient-to-r from-white to-transparent"></div>
             </div>
           </header>
         </SwiperSlide>
 
         {/* Slide 3 */}
         <SwiperSlide>
-          <header className="relative flex flex-col-reverse md:flex-row justify-between h-full">
+          <header className="relative flex flex-col-reverse lg:flex-row h-full text-center lg:text-left">
             {/* Left Side - Text */}
-            <div className="w-full relative z-10 mt-16 bg-white md:bg-transparent p-6 md:p-0">
+            <div className="w-full lg:w-1/2 relative z-10 bg-white lg:bg-transparent p-6">
               {/* SEO-Optimized About Us Heading */}
-              <h1 className="text-2xl md:text-4xl max-w-2xl font-bold leading-tight">
+              <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
                 Empowering Learners, Transforming Futures
               </h1>
-              <p className="text-lg md:text-xl mt-4 max-w-2xl text-gray-700">
+              <p className="text-lg lg:text-xl mt-4 text-gray-700">
                 We are dedicated to providing top-notch education, helping individuals and professionals gain real-world skills to thrive in their careers.  
               </p>
 
@@ -175,16 +176,15 @@ const HeroSlider = () => {
               </div>
             </div>
 
-
             {/* Right Side - Image with white overlay gradient */}
-            <div className="md:w-[60%] absolute right-0 w-1/2">
+            <div className="w-full lg:w-1/2 relative overflow-hidden">
               <img
                 src={imageSlider3}
                 alt="Best Online Courses"
-                className="w-full h-[550px] object-cover"
+                className="w-full h-full object-cover max-h-[500px]"
               />
               {/* White gradient flowing from text side into image */}
-              <div className="absolute hidden md:block inset-y-0 left-0 w-[30%] bg-gradient-to-r from-white to-transparent"></div>
+              <div className="absolute hidden lg:block inset-y-0 left-0 w-[30%] bg-gradient-to-r from-white to-transparent"></div>
             </div>
           </header>
         </SwiperSlide>

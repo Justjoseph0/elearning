@@ -17,6 +17,9 @@ export default {
   				'sans-serif'
   			]
   		},
+		  perspective: {
+			'1000': '1000px',
+		},
   		colors: {
   			primary: {
   				DEFAULT: 'hsl(var(--primary))',
