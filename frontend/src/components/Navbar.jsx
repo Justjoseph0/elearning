@@ -54,11 +54,11 @@ const NavBar = () => {
       
       {/* Main navbar */}
       <div className={`bg-white py-3 transition-all duration-300 ${scrolled ? 'py-2' : ''}`}>
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center">
-              <img src="images/courseLogo.png" alt="Company Logo" className="w-12 h-12 md:w-16 md:h-16" />
+              <img src="images/HeirLoom.png" alt="Company Logo" className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             
             {/* Desktop Navigation Links */}
