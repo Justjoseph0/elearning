@@ -57,7 +57,7 @@ const AboutUs = () => {
           <div className="flex flex-col gap-5 lg:w-1/2 h-full">
             {/* 📌 Image Section */}
             <img
-              src="/images/AboutImg1.png" 
+              src="/images/AboutImg1.jpg" 
               alt="Google Ranking Success"
               className="w-full h-[60%] object-cover rounded-lg shadow-lg"
             />
@@ -103,7 +103,7 @@ const AboutUs = () => {
 
             {/* 📌 Image Section */}
             <img
-              src="/images/AboutImg2.png" 
+              src="/images/AboutImg2.jpg" 
               alt="Google Ranking Success"
               className="w-full h-[60%] object-cover rounded-lg shadow-lg"
             />

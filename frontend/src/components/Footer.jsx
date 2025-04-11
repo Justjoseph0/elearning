@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-8 md:py-12 bg-customDark font-montserrat ">
+    <footer className="py-8 md:py-12 bg-customDark font-montserrat mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Contact Information Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">

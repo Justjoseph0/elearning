@@ -31,7 +31,7 @@ const Testimonial = () => {
 
                                 {/* Right: Image (Centered & Bordered) */}
                                 <div className='border-4 border-white  rounded-full overflow-hidden w-28 h-28 flex items-center justify-center -mr-14'>
-                                    <img src="/images/TestiImg1.png" alt="About" className="w-full h-full object-cover" />
+                                    <img src="/images/TestiImg1.jpg" alt="About" loading="lazy" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                             <div className='bg-customDark p-3 text-sm flex flex-col items-center rounded-b-xl text-white font-semibold'>
@@ -60,7 +60,7 @@ const Testimonial = () => {
                         <div className='m-4 flex flex-col items-center'>
                             {/* Right: Image (Centered & Bordered) */}
                             <div className='border-4 border-white rounded-full overflow-hidden w-32 h-32 flex items-center justify-center -mt-20'>
-                                <img src="/images/TestiImg8.png" alt="User Testimonial" className="w-full h-full object-cover" />
+                                <img src="/images/TestiImg8.jpg" alt="User Testimonial" loading="lazy" className="w-full h-full object-cover" />
                             </div>
                             
                             {/* Star Rating */}
@@ -97,13 +97,13 @@ const Testimonial = () => {
                     </div>
                     <div className=' flex mt-4 space-x-5'>
                         <div className='border-4 border-dark  rounded-full overflow-hidden w-24 h-24 flex items-center justify-center '>
-                            <img src="/images/TestiImg3.png" alt="About" className="w-full h-full object-cover" />
+                            <img src="/images/TestiImg3.jpg" alt="About" loading="lazy" className="w-full h-full object-cover" />
                         </div> 
                         <div className='border-4 border-dark mt-5  rounded-full overflow-hidden w-32 h-32 flex items-center justify-center '>
-                            <img src="/images/TestiImg-11.png" alt="About" className="w-full h-full object-cover" />
+                            <img src="/images/TestiImg-11.jpg" alt="About" loading="lazy" className="w-full h-full object-cover" />
                         </div> 
                         <div className='border-4 border-dark  rounded-full overflow-hidden w-24 h-24 flex items-center justify-center '>
-                            <img src="/images/TestiImg1.png" alt="About" className="w-full h-full object-cover" />
+                            <img src="/images/TestiImg1.jpg" alt="About" loading="lazy" className="w-full h-full object-cover" />
                         </div> 
                     </div>
                 </div>
@@ -114,14 +114,14 @@ const Testimonial = () => {
                 {/* 📌 Left Sub-Column */}
                 <div className='lg:w-[40%] flex flex-col  gap-5'>
                     <div className='bg-dark p-2 text-white rounded-lg font-montserrat'>
-                        <img src="/images/TestiImg4.png" alt="About" className='w-full h-full rounded-lg object-cover' />
+                        <img src="/images/TestiImg4.jpg" alt="About" loading="lazy" className='w-full h-full rounded-lg object-cover' />
                         
                     </div>
                     <div className='bg-dark flex flex-col text-white rounded-lg'>
                         <div className='m-4 flex flex-col items-center space-y-3'>
                             {/* Right: Image (Centered & Bordered) */}
                             <div className='border-4 border-white rounded-full overflow-hidden w-24 h-24 flex items-center justify-center '>
-                                <img src="/images/TestiImg2.png" alt="About" className="w-full h-full object-cover" />
+                                <img src="/images/TestiImg2.jpg" alt="About" loading="lazy" className="w-full h-full object-cover" />
                             </div>
                             <div className='flex justify-center items-center'>
                                 <Star className='text-yellow-500 fill-yellow-500'/>
@@ -150,7 +150,7 @@ const Testimonial = () => {
                         <div className='m-4 flex flex-col items-center space-y-3 '>
                             {/* Right: Image (Centered & Bordered) */}
                             <div className='border-4 border-white rounded-full overflow-hidden w-32 h-32 flex items-center justify-center -mt-20 '>
-                                <img src="/images/TestiImg8.png" alt="About" className="w-full h-full object-cover" />
+                                <img src="/images/TestiImg8.jpg" alt="About" loading="lazy" className="w-full h-full object-cover" />
                             </div>
                             <div className='flex justify-center items-center'>
                                 <Star className='text-yellow-500 fill-yellow-500'/>
@@ -170,7 +170,7 @@ const Testimonial = () => {
                     <div className='bg-customDark flex rounded-lg shadow-lg text-white overflow-hidden p-6 items-center'>
                         {/* Left Side: Image (Takes same width as text) */}
                         <div className='w-1/2 flex justify-center'>
-                            <img src="/images/TestiImg9.png" alt="Testimonial" className="w-32 h-32 rounded-full object-cover border-4 border-white" />
+                            <img src="/images/TestiImg9.jpg" alt="Testimonial" loading="lazy" className="w-32 h-32 rounded-full object-cover border-4 border-white" />
                         </div>
 
                         {/* Right Side: Testimonial Content */}
@@ -202,7 +202,7 @@ const Testimonial = () => {
                         <div className='flex flex-col items-center'>
                             {/* Profile Image */}
                             <div className='border-4 border-white rounded-full overflow-hidden w-32 h-32 flex items-center justify-center shadow-md'>
-                                <img src="/images/TestiImg2.png" alt="Testimonial" className="w-full h-full object-cover" />
+                                <img src="/images/TestiImg2.jpg" alt="Testimonial" loading="lazy" className="w-full h-full object-cover" />
                             </div> 
 
                             {/* Name & Role */}
@@ -244,7 +244,7 @@ const Testimonial = () => {
                         <span className="text-sm text-gray-300">Senior Cloud Engineer</span>
                         </div>
                         <div className="border-4 border-white rounded-full overflow-hidden w-20 h-20 flex items-center justify-center -mt-10 transform hover:scale-105 transition-transform duration-300">
-                        <img src="/images/TestiImg1.png" alt="Sophie Patel" className="w-full h-full object-cover" />
+                        <img src="/images/TestiImg1.jpg" alt="Sophie Patel" loading="lazy" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
@@ -266,7 +266,7 @@ const Testimonial = () => {
                     <span className="text-sm text-gray-300">Senior Cloud Engineer</span>
                     </div>
                     <div className="border-4 border-white rounded-full overflow-hidden w-20 h-20 flex items-center justify-center -mt-10 transform hover:scale-105 transition-transform duration-300">
-                    <img src="/images/TestiImg1.png" alt="Sophie Patel" className="w-full h-full object-cover" />
+                    <img src="/images/TestiImg1.jpg" alt="Sophie Patel" loading="lazy" className="w-full h-full object-cover" />
                     </div>
                 </div>
                 </div>
@@ -288,7 +288,7 @@ const Testimonial = () => {
                         <span className="text-sm text-gray-300">Senior Cloud Engineer</span>
                         </div>
                         <div className="border-4 border-white rounded-full overflow-hidden w-20 h-20 flex items-center justify-center -mt-10 transform hover:scale-105 transition-transform duration-300">
-                        <img src="/images/TestiImg1.png" alt="Sophie Patel" className="w-full h-full object-cover" />
+                        <img src="/images/TestiImg1.jpg" alt="Sophie Patel" loading="lazy" className="w-full h-full object-cover" />
                         </div>
                     </div>
                     </div>
